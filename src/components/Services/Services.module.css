@@ -137,12 +137,12 @@
     grid-template-columns: repeat(12, 1fr);
   }
   
-  .cardWide {
-    grid-column: span 7;
+  .cardHalf {
+    grid-column: span 6;
   }
   
-  .cardNormal {
-    grid-column: span 5;
+  .cardThird {
+    grid-column: span 4;
   }
 }
 

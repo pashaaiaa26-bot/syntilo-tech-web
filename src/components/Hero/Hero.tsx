@@ -164,10 +164,16 @@ export const Hero: React.FC = () => {
 
         {/* Call to Actions */}
         <div className={styles.buttonGroup}>
-          <button className={styles.primaryBtn}>
+          <button 
+            className={styles.primaryBtn}
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          >
             Book Discovery Call
           </button>
-          <button className={styles.secondaryBtn}>
+          <button 
+            className={styles.secondaryBtn}
+            onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+          >
             Explore Services
           </button>
         </div>

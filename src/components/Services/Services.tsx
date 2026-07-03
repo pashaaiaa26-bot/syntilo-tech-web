@@ -53,6 +53,17 @@ const SERVICES_DATA: ServiceItem[] = [
       "Vector database embeddings",
       "Automated media publishing"
     ]
+  },
+  {
+    id: 5,
+    title: "Website Development",
+    badge: "SCALABLE APPS",
+    description: "High-performance Next.js websites, headless CMS integrations, and responsive landing pages built at 10x velocity.",
+    features: [
+      "Next.js App Router & SEO optimization",
+      "Custom CSS Modules & micro-animations",
+      "Headless CMS & database integrations"
+    ]
   }
 ];
 
@@ -74,7 +85,7 @@ export const Services: React.FC = () => {
           {SERVICES_DATA.map((service, index) => {
             // Apply asymmetric spans on desktop for bento styling
             const cardClass = `${styles.bentoCard} ${
-              index === 0 || index === 3 ? styles.cardWide : styles.cardNormal
+              index < 2 ? styles.cardHalf : styles.cardThird
             }`;
 
             return (
