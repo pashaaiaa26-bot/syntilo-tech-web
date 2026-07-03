@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export const Footer: React.FC = () => {
@@ -15,10 +16,11 @@ export const Footer: React.FC = () => {
 
         {/* Right Side: Links */}
         <div className={styles.linksRow}>
-          <a href="#" className={styles.footerLink}>Privacy Policy</a>
-          <a href="#" className={styles.footerLink}>Terms of Service</a>
+          <Link href="/privacy-policy" className={styles.footerLink}>Privacy Policy</Link>
+          <Link href="/terms" className={styles.footerLink}>Terms of Service</Link>
         </div>
       </div>
     </footer>
   );
 };
+
