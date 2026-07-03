@@ -1,0 +1,73 @@
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  background-color: #F8FAFC;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 0;
+  display: flex;
+  position: relative;
+  pointer-events: none;
+}
+
+/* Gradient masks on the sides for a premium fading visual effect */
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, #F8FAFC 0%, rgba(248, 250, 252, 0) 100%);
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, #F8FAFC 0%, rgba(248, 250, 252, 0) 100%);
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: scroll 30s linear infinite;
+  z-index: 1;
+}
+
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.techText {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.techDot {
+  color: #0d9488; /* Emerald Teal color */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate by exactly 1/3 (since array is tripled) for a seamless loop */
+    transform: translateX(-33.3333%);
+  }
+}
