@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 export const Header: React.FC = () => {
@@ -24,12 +25,12 @@ export const Header: React.FC = () => {
       <div className={styles.headerContainer}>
         {/* Left Block: Outfit Text Logo */}
         <div className={styles.logoWrapper}>
-          <span className={styles.logoText}>Syntilo Tech</span>
+          <Link href="/" className={styles.logoText}>Syntilo Tech</Link>
         </div>
 
         {/* Center Block: Navigation Links */}
         <nav className={styles.navWrapper}>
-          <a href="#" className={styles.navLink}>Home</a>
+          <Link href="/" className={styles.navLink}>Home</Link>
           <a href="#services" className={styles.navLink}>Services</a>
           <a href="#portfolio" className={styles.navLink}>Portfolio</a>
           <a href="#contact" className={styles.navLink}>Contact</a>
