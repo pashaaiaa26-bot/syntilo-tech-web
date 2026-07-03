@@ -37,7 +37,10 @@ export const Header: React.FC = () => {
 
         {/* Right Block: Emerald CTA Button */}
         <div className={styles.ctaWrapper}>
-          <button className={styles.ctaBtn}>
+          <button 
+            className={styles.ctaBtn}
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          >
             Book Consultation
           </button>
         </div>
